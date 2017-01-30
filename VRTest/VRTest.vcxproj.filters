@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\Pm">
+      <UniqueIdentifier>{b1e1d6a3-b4cb-4ba9-a2b9-b6fc45bb8510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Pm">
+      <UniqueIdentifier>{3f3df241-18ce-4c77-99c7-58286ad8b9eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Item">
+      <UniqueIdentifier>{22c7d8ce-a0cf-4381-a854-855c940ea6fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Player">
+      <UniqueIdentifier>{b0d3cc74-c822-4753-89bf-dcb6a62fe1bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Player">
+      <UniqueIdentifier>{49fb6e85-0d90-40ea-b62f-bb77c8af3300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Item">
+      <UniqueIdentifier>{939a42d4-396e-4e53-9ec0-e533aeb728c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\VR">
+      <UniqueIdentifier>{df50d543-a0db-4ae4-9d51-97833c6b7f9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\CGimmick">
+      <UniqueIdentifier>{d6a59422-d763-4f8f-bd48-ef5003dcefdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\CGimmick">
+      <UniqueIdentifier>{83cc32c4-71c7-478d-995f-295e096cf9c2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="PmGameScene.cpp">
+      <Filter>ソース ファイル\Pm</Filter>
+    </ClCompile>
+    <ClCompile Include="PmGameSummary.cpp">
+      <Filter>ソース ファイル\Pm</Filter>
+    </ClCompile>
+    <ClCompile Include="PmManager.cpp">
+      <Filter>ソース ファイル\Pm</Filter>
+    </ClCompile>
+    <ClCompile Include="PmObject.cpp">
+      <Filter>ソース ファイル\Pm</Filter>
+    </ClCompile>
+    <ClCompile Include="PmObjectCreate.cpp">
+      <Filter>ソース ファイル\Pm</Filter>
+    </ClCompile>
+    <ClCompile Include="PmObjectDynamic.cpp">
+      <Filter>ソース ファイル\Pm</Filter>
+    </ClCompile>
+    <ClCompile Include="PmPhysxCreateTool.cpp">
+      <Filter>ソース ファイル\Pm</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="PmRender.cpp">
+      <Filter>ソース ファイル\Pm</Filter>
+    </ClCompile>
+    <ClCompile Include="CHand.cpp">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CItem.cpp">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="CWrench.cpp">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="GameApp.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CVRPlayerCamera.cpp">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="VR\VRCamera.cpp">
+      <Filter>ソース ファイル\VR</Filter>
+    </ClCompile>
+    <ClCompile Include="VR\VRManager.cpp">
+      <Filter>ソース ファイル\VR</Filter>
+    </ClCompile>
+    <ClCompile Include="CWrenchSummary.cpp">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="CValveSummary.cpp">
+      <Filter>ソース ファイル\CGimmick</Filter>
+    </ClCompile>
+    <ClCompile Include="CDrawerSummary.cpp">
+      <Filter>ソース ファイル\CGimmick</Filter>
+    </ClCompile>
+    <ClCompile Include="CDrawerCollSearch.cpp">
+      <Filter>ソース ファイル\CGimmick</Filter>
+    </ClCompile>
+    <ClCompile Include="CDirectionSet.cpp">
+      <Filter>ソース ファイル\CGimmick</Filter>
+    </ClCompile>
+    <ClCompile Include="CFigure.cpp">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="CFigureSummary.cpp">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameApp.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameBase.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="PmCollisionSearch.h">
+      <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="PmGameScene.h">
+      <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="PmGameSummary.h">
+      <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="PmManager.h">
+      <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="PmObject.h">
+      <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="PmPreparation.h">
+      <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="PmObjectDynamic.h">
+      <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="PmObjectCreate.h">
+      <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="CBase.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameSummary.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="PmPhysxCreateTool.h">
+      <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="TestObject.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="PmRender.h">
+      <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="PmObjectTags.h">
+      <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="CItem.h">
+      <Filter>ヘッダー ファイル\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>ヘッダー ファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CWrench.h">
+      <Filter>ヘッダー ファイル\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="CHand.h">
+      <Filter>ヘッダー ファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CVRPlayerCamerah.h">
+      <Filter>ヘッダー ファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="VR\VRCamera.h">
+      <Filter>ソース ファイル\VR</Filter>
+    </ClInclude>
+    <ClInclude Include="VR\VRManager.h">
+      <Filter>ソース ファイル\VR</Filter>
+    </ClInclude>
+    <ClInclude Include="CWrenchSummary.h">
+      <Filter>ヘッダー ファイル\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="CBreakGimmick.h">
+      <Filter>ヘッダー ファイル\CGimmick</Filter>
+    </ClInclude>
+    <ClInclude Include="CValveSummary.h">
+      <Filter>ヘッダー ファイル\CGimmick</Filter>
+    </ClInclude>
+    <ClInclude Include="FluidTest.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonDefine.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CDrawerSummary.h">
+      <Filter>ヘッダー ファイル\CGimmick</Filter>
+    </ClInclude>
+    <ClInclude Include="CDrawerCollSearch.h">
+      <Filter>ヘッダー ファイル\CGimmick</Filter>
+    </ClInclude>
+    <ClInclude Include="CDirectionSet.h">
+      <Filter>ヘッダー ファイル\CGimmick</Filter>
+    </ClInclude>
+    <ClInclude Include="CFigure.h">
+      <Filter>ヘッダー ファイル\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="CFigureSummary.h">
+      <Filter>ヘッダー ファイル\Item</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VR\VRCamera.inl">
+      <Filter>ソース ファイル\VR</Filter>
+    </None>
+    <None Include="VR\VRManager.inl">
+      <Filter>ソース ファイル\VR</Filter>
+    </None>
+  </ItemGroup>
+</Project>
