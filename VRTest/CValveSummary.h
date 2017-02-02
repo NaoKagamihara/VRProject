@@ -1,6 +1,8 @@
 //////////////////////////////////
 //ƒoƒ‹ƒu
 
+#pragma once
+
 #include	"CBreakGimmick.h"
 #include	"PmRender.h"
 #include	"CHand.h"

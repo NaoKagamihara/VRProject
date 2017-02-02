@@ -59,6 +59,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>C:\Library\Include;C:\PhysxLib\Include;C:\OpenVR</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -86,6 +87,7 @@
     <ClCompile Include="PmGameSummary.cpp" />
     <ClCompile Include="PmManager.cpp" />
     <ClCompile Include="PmObject.cpp" />
+    <ClCompile Include="PmObjectCharacter.cpp" />
     <ClCompile Include="PmObjectCreate.cpp" />
     <ClCompile Include="PmObjectDynamic.cpp" />
     <ClCompile Include="PmPhysxCreateTool.cpp" />
@@ -120,6 +122,7 @@
     <ClInclude Include="PmGameSummary.h" />
     <ClInclude Include="PmManager.h" />
     <ClInclude Include="PmObject.h" />
+    <ClInclude Include="PmObjectCharcter.h" />
     <ClInclude Include="PmObjectCreate.h" />
     <ClInclude Include="PmObjectDynamic.h" />
     <ClInclude Include="PmObjectTags.h" />

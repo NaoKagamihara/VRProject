@@ -2,6 +2,8 @@
 //////////////////////
 //壊れるギミック基底クラス
 
+#pragma once
+
 #include	"PmGameSummary.h"
 
 class CBreakGimmick : public PmGameSummary

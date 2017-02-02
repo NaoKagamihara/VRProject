@@ -15,7 +15,9 @@
 
 using namespace std;
 
-class PmManager : public PxSimulationEventCallback
+class PmManager : public PxSimulationEventCallback, 
+					public PxControllerBehaviorCallback,
+					public PxUserControllerHitReport
 {
 
 private:
@@ -33,6 +35,9 @@ private:
 	PxDefaultCpuDispatcher*			m_pDispatcher;
 
 	PxScene*						m_pScene;
+
+	PxControllerManager*			m_pConManager;				//キャラクタコントローラ
+	PxU32							m_TagInteraction;			//キャラクタとの相互作用を定義する用の変数
 
 	///////////////////////////////////////////
 	//Physxに持たせてあるオブジェクトを管理するやつ
@@ -66,6 +71,21 @@ public:
 	virtual PxControllerBehaviorFlags		getBehaviorFlags(const PxController& controller);
 	virtual PxControllerBehaviorFlags		getBehaviorFlags(const PxObstacle& obstacle);
 
+	////////////////////////////////////////////////////////////////////////////////
+	//
+	// Implements PxUserControllerHitReport
+	//
+	virtual void							onShapeHit(const PxControllerShapeHit& hit);
+	virtual void							onControllerHit(const PxControllersHit& hit)		{};
+	virtual void							onObstacleHit(const PxControllerObstacleHit& hit)	{};
+
+	/////////////////////////////////////////////////////////////////////////
+	//キャラクタの相互作用関係
+	void defaultCCTInteraction(const PxControllerShapeHit& hit);
+
+	void addForceAtLocalPos(PxRigidBody& body, const PxVec3& force, const PxVec3& pos, PxForceMode::Enum mode, bool wakeup = true);
+
+	void addForceAtPosInternal(PxRigidBody& body, const PxVec3& force, const PxVec3& pos, PxForceMode::Enum mode, bool wakeup);
 
 	PmManager();
 	~PmManager();
@@ -79,6 +99,7 @@ public:
 	//PxPhysicsを渡す
 	PxPhysics* getPhysics(){ return m_pPhysics; };
 
+	//PmObjectを渡す
 	PmObjectCreate* getObjectCreate(){ return m_pCreate; };
 
 };

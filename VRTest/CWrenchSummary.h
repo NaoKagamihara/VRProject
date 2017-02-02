@@ -1,6 +1,8 @@
 ////////////////////////////////
 //ƒŒƒ“ƒ`‚ğŠÇ—‚·‚éƒNƒ‰ƒX
 
+#pragma once
+
 #include	"CWrench.h"
 #include	"PmGameSummary.h"
 

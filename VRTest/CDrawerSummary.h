@@ -2,6 +2,8 @@
 //////////////////////////////////////
 //‚Ğ‚«‚¾‚µŠÇ—ƒNƒ‰ƒX
 
+#pragma once
+
 //INCLUDE
 #include	"PmGameSummary.h"
 #include	"PmRender.h"

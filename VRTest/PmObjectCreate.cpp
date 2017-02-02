@@ -5,11 +5,13 @@
 
 
 
-PmObjectCreate::PmObjectCreate(PxPhysics* physics, PxFoundation* foundation, PxScene* scene, vector<PmObject*>& obj)
+PmObjectCreate::PmObjectCreate(PxPhysics* physics, PxFoundation* foundation, PxScene* scene, vector<PmObject*>& obj, PxControllerManager* m_ConManager, PxCapsuleControllerDesc conDesc)
 {
 	m_pPhysics = physics;
 	m_pScene = scene;
 	mv_Object = &obj;
+	m_pConManager = m_ConManager;
+	m_ConDesc = conDesc;
 
 	m_pCooking = PxCreateCooking(PX_PHYSICS_VERSION, *foundation, PxCookingParams(PxTolerancesScale()));
 	if (!m_pCooking)
@@ -330,6 +332,28 @@ PmObject* PmObjectCreate::createObject(CVector3 pos, bool dynamic)
 	}
 
 	return NULL;
+}
+
+//PmObjectCharacter‚ðì¬‚·‚é
+PmObjectCharacter* PmObjectCreate::createCharacterCapsuleObject(CVector3 pos, float r, float h, PxMaterial* material,
+	float slopeLimit,
+	float contactOffset,
+	float stepOffset)
+{
+	
+	m_ConDesc.material = material;
+	m_ConDesc.position = PxExtendedVec3(pos.x, pos.y, pos.z);				//À•W
+	m_ConDesc.height = h;													//‚‚³i’†S‚©‚çYŽ²‚É+‚Æ-‚Ì•ûŒü‚É‰„‚Ñ‚é’·‚³j
+	m_ConDesc.radius = r;													//”¼Œa
+	m_ConDesc.slopeLimit = slopeLimit;										//“o‚ê‚éŠp“x‚©‚È
+	m_ConDesc.contactOffset = contactOffset;								//Õ“Ë¸“x
+
+	PmObjectCapsuleCharacter* character = new PmObjectCapsuleCharacter(m_pConManager->createController(m_ConDesc));
+
+	character->setHeight(h);
+	character->setRadius(r);
+
+	return character;
 }
 
 //CItemCreate

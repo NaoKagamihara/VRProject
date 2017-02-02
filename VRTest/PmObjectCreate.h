@@ -5,6 +5,7 @@
 
 #include	"PmObjectDynamic.h"
 #include	"PmPhysxCreateTool.h"
+#include	"PmObjectCharcter.h"
 #include	"CItem.h"
 
 #include	<vector>
@@ -20,11 +21,14 @@ private:
 	PxScene*			m_pScene;
 	PxCooking*			m_pCooking;
 
+	PxControllerManager* m_pConManager;	//コントローラ
+	PxCapsuleControllerDesc m_ConDesc;	//コントローラ作成用デスク
+
 	vector<PmObject*>*	mv_Object;
 
 public:
 	
-	PmObjectCreate(PxPhysics* physics, PxFoundation* foundation, PxScene* scene, vector<PmObject*>& obj);
+	PmObjectCreate(PxPhysics* physics, PxFoundation* foundation, PxScene* scene, vector<PmObject*>& obj, PxControllerManager* m_ConManager, PxCapsuleControllerDesc conDesc);
 	~PmObjectCreate();
 
 	void release();
@@ -80,6 +84,12 @@ public:
 	//material	:材質
 	//mesh		:メッシュ
 	PmObject* createTriangleObject(CVector3 pos, PxMaterial* material, CMeshContainer mesh, CVector3 scale = CVector3(1.0f, 1.0f, 1.0f));
+
+	//PmObjectCharacterを作成する
+	PmObjectCharacter* createCharacterCapsuleObject(CVector3 pos, float r, float h, PxMaterial* material,
+		float slopeLimit = MOF_ToRadian(45.0f),
+		float contactOffset = 0.1f,
+		float stepOffset = 0.02f);
 
 	//CItemCreate
 	void createCItemObject(PmObjectDynamic* obj);

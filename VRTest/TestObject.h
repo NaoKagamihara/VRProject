@@ -138,7 +138,9 @@ public:
 		}
 
 		delete tool;
+
 		pos = CVector3(0, 0, 0);
+
 	}
 	 
 	virtual void Initialize()
