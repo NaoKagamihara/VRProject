@@ -52,7 +52,7 @@ private:
 	PmObject*			m_pPipeObj;
 
 public:
-	CValveSummary(){};
+	CValveSummary(CInundation* inun) : CBreakGimmick(inun){};
 	~CValveSummary(){};
 
 	void Create();

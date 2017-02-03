@@ -35,6 +35,7 @@ MofBool CGameApp::Initialize(void){
 
 	g_pScene->Preparation();
 	g_pScene->Create();
+	g_pScene->SceneInitialize();
 	g_pScene->Initialize();
 	
 	return TRUE;
@@ -60,7 +61,9 @@ MofBool CGameApp::Update(void){
 	CVRManager::Update();
 
 	//シーン更新
+	g_pScene->SceneUpdate();
 	g_pScene->Update();
+	g_pScene->SceneRearUpdate();
 
 	return TRUE;
 }
@@ -80,7 +83,6 @@ MofBool CGameApp::Render(void){
 
 	/////////////////////////////////////////////////
 	//VRなしのテスト描画
-
 	g_pScene->Render();
 
 	//描画の終了
@@ -157,6 +159,7 @@ MofBool CGameApp::Release(void){
 	//VR解放
 	CVRManager::Release();
 	//シーン解放
+	g_pScene->SceneRelease();
 	g_pScene->Release();
 	delete g_pCamera;
 	delete g_pScene;

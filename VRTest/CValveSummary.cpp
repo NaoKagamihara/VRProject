@@ -89,6 +89,12 @@ void CValveSummary::Update()
 		//m_Rotation.x += MOF_ToRadian(1);
 		//m_pCollision->setGlobalRot(m_Rotation);	
 	}
+
+	//‰ó‚ê‚Ä‚¢‚éŠÔ‚Í…‚ð’Ç‰Á
+	if (m_bBreakFlag == true)
+	{
+		m_pInundation->addWater(DEFADDWATER);
+	}
 }
 
 void CValveSummary::RearUpdate()

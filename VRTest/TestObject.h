@@ -172,7 +172,6 @@ public:
 			}
 		}
 
-
 		if (g_pInput->IsKeyHold(MOFKEY_B))
 		{
 			CVector3 pos = floor->getGlobalPos();
@@ -204,7 +203,7 @@ public:
 		CMatrix44 rot;
 		rot.RotationY(MOF_ToRadian(180));
 		mat.SetTranslation(CVector3(10, 0, 0));
-		mesh2.Render(rot * sca * mat);
+		//mesh2.Render(rot * sca * mat);
 		
 		//è∞ï`âÊ
 		PmRenderShape::RenderShape(floor, Mof::Color(0, 0, 0.8f, 0.3f));

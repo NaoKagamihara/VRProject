@@ -9,6 +9,7 @@
 #include		"PmObject.h"
 #include		"PmPreparation.h"
 #include		"PmPhysxCreateTool.h"
+#include		"particles\PxParticleFluid.h"
 #include		"Mof.h"
 
 #include		<vector>
@@ -38,6 +39,8 @@ private:
 
 	PxControllerManager*			m_pConManager;				//キャラクタコントローラ
 	PxU32							m_TagInteraction;			//キャラクタとの相互作用を定義する用の変数
+
+	PxParticleFluid*				m_pFluid;					//流体管理クラス
 
 	///////////////////////////////////////////
 	//Physxに持たせてあるオブジェクトを管理するやつ
@@ -101,6 +104,9 @@ public:
 
 	//PmObjectを渡す
 	PmObjectCreate* getObjectCreate(){ return m_pCreate; };
+
+	//PxParticleFluidを渡す
+	PxParticleFluid* getFluid(){ return m_pFluid; };
 
 };
 

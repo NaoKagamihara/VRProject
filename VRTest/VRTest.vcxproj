@@ -78,6 +78,7 @@
     <ClCompile Include="CItem.cpp" />
     <ClCompile Include="CValveSummary.cpp" />
     <ClCompile Include="CVRPlayerCamera.cpp" />
+    <ClCompile Include="CInundation.cpp" />
     <ClCompile Include="CWrench.cpp" />
     <ClCompile Include="CWrenchSummary.cpp" />
     <ClCompile Include="CDrawerCollSearch.cpp" />
@@ -112,6 +113,7 @@
     <ClInclude Include="CPlayer.h" />
     <ClInclude Include="CValveSummary.h" />
     <ClInclude Include="CVRPlayerCamerah.h" />
+    <ClInclude Include="CInundation.h" />
     <ClInclude Include="CWrench.h" />
     <ClInclude Include="CWrenchSummary.h" />
     <ClInclude Include="CDrawerCollSearch.h" />

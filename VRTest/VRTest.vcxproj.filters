@@ -40,6 +40,12 @@
     <Filter Include="ソース ファイル\CGimmick">
       <UniqueIdentifier>{83cc32c4-71c7-478d-995f-295e096cf9c2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\Water">
+      <UniqueIdentifier>{c61f031e-d508-4aa4-8b36-404e074f1710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Water">
+      <UniqueIdentifier>{8415ba69-7bdc-4e03-8aba-24c1634be58d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -119,6 +125,9 @@
     </ClCompile>
     <ClCompile Include="PmObjectCharacter.cpp">
       <Filter>ソース ファイル\Pm</Filter>
+    </ClCompile>
+    <ClCompile Include="CInundation.cpp">
+      <Filter>ソース ファイル\Water</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +238,9 @@
     </ClInclude>
     <ClInclude Include="PmObjectCharcter.h">
       <Filter>ヘッダー ファイル\Pm</Filter>
+    </ClInclude>
+    <ClInclude Include="CInundation.h">
+      <Filter>ヘッダー ファイル\Water</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

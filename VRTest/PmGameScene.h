@@ -29,6 +29,9 @@ private:
 
 protected:
 
+	//Manager‚ÌFluid‚ğ“n‚·
+	PxParticleFluid* getFluid(){ return m_Manager.getFluid(); };
+
 	/*************************************************************************//*!
 		@brief			CGameSummary‚ğƒV[ƒ“‚É’Ç‰Á‚·‚é	
 

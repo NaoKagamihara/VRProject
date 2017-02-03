@@ -88,7 +88,26 @@ void PmManager::Initialize()
 
 	m_pConManager->setOverlapRecoveryModule(true);	//重複防止機能のフラグをonに
 
+	//particle設定
+	physx::PxU32 maxParticles = 20000;
+	bool perParticleRestOffset = false;
 
+	// create particle system in PhysX SDK
+	m_pFluid = m_pPhysics->createParticleFluid(maxParticles, perParticleRestOffset);
+	physx::PxReal particleDistance = 0.05;
+	m_pFluid->setGridSize(5.0f);
+	m_pFluid->setMaxMotionDistance(0.3f);
+	m_pFluid->setRestOffset(particleDistance*0.3f);
+	m_pFluid->setContactOffset(particleDistance*0.3f * 2);
+	m_pFluid->setDamping(0.0f);
+	m_pFluid->setRestitution(0.3f);
+	m_pFluid->setDynamicFriction(0.001f);
+	m_pFluid->setRestParticleDistance(particleDistance);
+	m_pFluid->setViscosity(60.0f);
+	m_pFluid->setStiffness(45.0f);
+
+	//設定したFluidをシーンに追加する
+	m_pScene->addActor(*m_pFluid);
 }
 
 void PmManager::Update()

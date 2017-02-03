@@ -5,13 +5,15 @@
 #pragma once
 
 #include	"PmGameSummary.h"
+#include	"CInundation.h"
 
 class CBreakGimmick : public PmGameSummary
 {
 protected:
-	bool	m_bBreakFlag;
+	bool			m_bBreakFlag;
+	CInundation*	m_pInundation;
 public:
-	CBreakGimmick(){ m_bBreakFlag = false; };
+	CBreakGimmick(CInundation* inun){ m_bBreakFlag = false; m_pInundation = inun; };
 	virtual ~CBreakGimmick(){};
 
 	virtual void gimmickBreak() = 0;
