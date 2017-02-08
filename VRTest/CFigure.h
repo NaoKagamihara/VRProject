@@ -20,7 +20,7 @@ public:
 
 	virtual void itemHave(const CVector3& pos, const CQuaternion& rot);
 
-	virtual void itemLost(const CVector3& vec);
+	virtual void itemLost(const CVector3& vec, const CQuaternion& rot);
 
 	virtual void render();
 	virtual void debugRender();

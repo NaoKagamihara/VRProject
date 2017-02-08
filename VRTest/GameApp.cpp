@@ -16,6 +16,7 @@
 PmGameScene*	g_pScene;
 CVRCamera*		g_pCamera;
 
+
 /*************************************************************************//*!
 		@brief			アプリケーションの初期化
 		@param			None
@@ -38,6 +39,9 @@ MofBool CGameApp::Initialize(void){
 	g_pScene->SceneInitialize();
 	g_pScene->Initialize();
 	
+	//しぇーだーしゅとく
+	//CGraphicsUtilities::Get3DPrimitiveShader();
+
 	return TRUE;
 }
 /*************************************************************************//*!
@@ -81,13 +85,6 @@ MofBool CGameApp::Render(void){
 	//深度バッファ有効化
 	g_pGraphics->SetDepthEnable(TRUE);
 
-	/////////////////////////////////////////////////
-	//VRなしのテスト描画
-	g_pScene->Render();
-
-	//描画の終了
-	g_pGraphics->RenderEnd();
-
 	/////////////////////////////////////////////////////
 	//VR用描画
 
@@ -125,6 +122,7 @@ MofBool CGameApp::Render(void){
 
 	//-------------------------------------------------------------------------
 	//PCディスプレイへの表示（必要があれば）
+
 	//画面のクリア
 	g_pGraphics->ClearTarget(0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0);
 
@@ -137,6 +135,16 @@ MofBool CGameApp::Render(void){
 	//FPS
 	CGraphicsUtilities::RenderString(10, 30, "%d", CUtilities::GetFPS());
 
+	////描画先を戻す
+	//g_pGraphics->SetRenderTarget(prt, g_pGraphics->GetDepthTarget());
+
+	//g_pGraphics->ClearTarget(0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0);
+	//CMatrix44 mat;
+	//static float ry = 0;
+	//ry += 0.01f;
+	//mat.RotationX(ry);
+	//mat.SetTranslation(0,0,10);
+	//g_pTarget->Render(mat);
 	//-------------------------------------------------------------------------
 	
 	//描画の終了

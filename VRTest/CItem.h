@@ -39,7 +39,7 @@ public:
 	virtual void itemHave(const CVector3& pos, const CQuaternion& rot){};
 
 	//アイテムを離す
-	virtual void itemLost(const CVector3& vec){};
+	virtual void itemLost(const CVector3& vec,const CQuaternion& rot){};
 
 	//アイテムを使用する
 	virtual void itemUse(){};

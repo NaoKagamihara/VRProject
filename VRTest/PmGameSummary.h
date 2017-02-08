@@ -250,6 +250,13 @@ public:
 	*//**************************************************************************/
 	PmObject* createTriangleObject(const CVector3& pos, PxMaterial* material, CMeshContainer mesh, const CVector3& scale = CVector3(1.0f, 1.0f, 1.0f));
 
+
+	//PmObjectCharacter‚ğì¬‚·‚é
+	PmObjectCharacter* createCharacterCapsuleObject(CVector3 pos, float height, float radius, PxMaterial* material,
+		float slopeLimit = MOF_ToRadian(45.0f),
+		float contactOffset = 0.1f,
+		float stepOffset = 0.02f);
+
 	/*************************************************************************//*!
 		@brief			PmObject‚ğƒV[ƒ“‚©‚çŠO‚·
 						

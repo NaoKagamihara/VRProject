@@ -46,6 +46,18 @@
     <Filter Include="ソース ファイル\Water">
       <UniqueIdentifier>{8415ba69-7bdc-4e03-8aba-24c1634be58d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\CGimmick\Light">
+      <UniqueIdentifier>{a2127303-ec0b-4653-941d-aca8cd1eef05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\CGimmick\Fuse">
+      <UniqueIdentifier>{2b7988c6-b07f-431f-9e67-de7f07d8714f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\CGimmick\Fuse">
+      <UniqueIdentifier>{ee9a525a-6ba4-4d71-9412-cc32bac6599b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\CGimmick\Drawer">
+      <UniqueIdentifier>{764065d1-3673-4a3d-8af6-d48f4dcf381c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -108,15 +120,6 @@
     <ClCompile Include="CValveSummary.cpp">
       <Filter>ソース ファイル\CGimmick</Filter>
     </ClCompile>
-    <ClCompile Include="CDrawerSummary.cpp">
-      <Filter>ソース ファイル\CGimmick</Filter>
-    </ClCompile>
-    <ClCompile Include="CDrawerCollSearch.cpp">
-      <Filter>ソース ファイル\CGimmick</Filter>
-    </ClCompile>
-    <ClCompile Include="CDirectionSet.cpp">
-      <Filter>ソース ファイル\CGimmick</Filter>
-    </ClCompile>
     <ClCompile Include="CFigure.cpp">
       <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
@@ -128,6 +131,30 @@
     </ClCompile>
     <ClCompile Include="CInundation.cpp">
       <Filter>ソース ファイル\Water</Filter>
+    </ClCompile>
+    <ClCompile Include="CHandCollSearch.cpp">
+      <Filter>ソース ファイル\CGimmick</Filter>
+    </ClCompile>
+    <ClCompile Include="CDirectionSet.cpp">
+      <Filter>ソース ファイル\CGimmick\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="CFuseTrigger.cpp">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="CFuseSummary.cpp">
+      <Filter>ソース ファイル\CGimmick\Fuse</Filter>
+    </ClCompile>
+    <ClCompile Include="CFuseCollSearch.cpp">
+      <Filter>ソース ファイル\CGimmick\Fuse</Filter>
+    </ClCompile>
+    <ClCompile Include="CDrawerCollSearch.cpp">
+      <Filter>ソース ファイル\CGimmick\Drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="CDrawerSummary.cpp">
+      <Filter>ソース ファイル\CGimmick\Drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="CMonitor.cpp">
+      <Filter>ソース ファイル\CGimmick</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -230,9 +257,6 @@
     <ClInclude Include="CDirectionSet.h">
       <Filter>ヘッダー ファイル\CGimmick</Filter>
     </ClInclude>
-    <ClInclude Include="CFigure.h">
-      <Filter>ヘッダー ファイル\Item</Filter>
-    </ClInclude>
     <ClInclude Include="CFigureSummary.h">
       <Filter>ヘッダー ファイル\Item</Filter>
     </ClInclude>
@@ -241,6 +265,24 @@
     </ClInclude>
     <ClInclude Include="CInundation.h">
       <Filter>ヘッダー ファイル\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="CHandCollSearch.h">
+      <Filter>ヘッダー ファイル\CGimmick</Filter>
+    </ClInclude>
+    <ClInclude Include="CFigure.h">
+      <Filter>ヘッダー ファイル\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="CFuseTrigger.h">
+      <Filter>ヘッダー ファイル\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="CFuseSummary.h">
+      <Filter>ヘッダー ファイル\CGimmick\Fuse</Filter>
+    </ClInclude>
+    <ClInclude Include="CFuseCollSearch.h">
+      <Filter>ヘッダー ファイル\CGimmick\Fuse</Filter>
+    </ClInclude>
+    <ClInclude Include="CMonitor.h">
+      <Filter>ヘッダー ファイル\CGimmick</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

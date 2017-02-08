@@ -76,6 +76,15 @@ PmObject* PmGameSummary::createTriangleObject(const CVector3& pos, PxMaterial* m
 	return m_pCreate->createTriangleObject(pos, material, mesh, scale);
 }
 
+//PmObjectCharacterを作成する
+PmObjectCharacter* PmGameSummary::createCharacterCapsuleObject(CVector3 pos, float height, float radius, PxMaterial* material,
+	float slopeLimit,
+	float contactOffset,
+	float stepOffset)
+{
+	return m_pMng->createCharacterCapsuleObject(pos, height, radius, material, slopeLimit, contactOffset, stepOffset);
+}
+
 //PmObjectをシーンから外す
 //obj		:シーンから外すオブジェクト
 void PmGameSummary::detachObject(PmObject* obj)

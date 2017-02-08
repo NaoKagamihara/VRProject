@@ -21,4 +21,5 @@ enum EPmObjectTag
 	OBJ_HANDGRASP = (1 << 2),
 	OBJ_ITEM = (1 << 3),
 	OBJ_FIGURE = (1 << 4),
+	OBJ_FUSE = (1 << 5),
 };

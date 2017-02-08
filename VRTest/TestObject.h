@@ -114,8 +114,8 @@ public:
 		//É}ÉeÉäÉAÉãçÏê¨
 		mate = tool->createMaterial(CVector3(0.5f, 0.5f, 0.1f)); 
 		//è∞çÏê¨
-		floor = createBoxObject(CVector3(0, -2, 0), mate, 100, 1, 100, false);
-		floor->setCollision(1, false);
+		//floor = createBoxObject(CVector3(0, -2, 0), mate, 100, 1, 100, false);
+		//floor->setCollision(1, false);
 		//floor = createTriangleObject(CVector3(0, 0, 0), mate, mesh, CVector3(OBJALLSCALE, OBJALLSCALE, OBJALLSCALE));
 
 		//createBoxObject(CVector3(0, -1, 0), mate, 100, 1, 100, false);
@@ -132,7 +132,7 @@ public:
 		{
 			ERMS("MeshLoadError");
 		}
-		if (!mesh2.Load("monitorroom.mom"))
+		if (!mesh2.Load("fusebox.mom"))
 		{
 			ERMS("MeshLoadError");
 		}
@@ -140,13 +140,10 @@ public:
 		delete tool;
 
 		pos = CVector3(0, 0, 0);
-
 	}
 	 
 	virtual void Initialize()
 	{
-
-
 
 	}
 
@@ -201,12 +198,11 @@ public:
 		mat.SetTranslation(CVector3(0, 0, 0));
 		mesh.Render(sca * mat);	
 		CMatrix44 rot;
-		rot.RotationY(MOF_ToRadian(180));
-		mat.SetTranslation(CVector3(10, 0, 0));
-		//mesh2.Render(rot * sca * mat);
-		
+		//rot.RotationY(MOF_ToRadian(180));
+		//mat.SetTranslation(CVector3(0, 5, 0));
+		//mesh2.Render(sca * mat);
 		//è∞ï`âÊ
-		PmRenderShape::RenderShape(floor, Mof::Color(0, 0, 0.8f, 0.3f));
+		//PmRenderShape::RenderShape(floor, Mof::Color(0, 0, 0.8f, 0.3f));
 	}
 
 	virtual void RearRender()

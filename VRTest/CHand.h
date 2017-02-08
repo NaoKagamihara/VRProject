@@ -66,6 +66,7 @@ private:
 	CItem*			m_pItem;		//持っているアイテム
 	CHandSearch*	m_pSearch;		//トリガー
 	CVector3		m_HysPos;		//１フレーム前の座標
+	CQuaternion		m_HysRot;		//１フレーム前の向き
 	CVector3		m_PoseVec;		//コントローラの姿勢
 
 public:

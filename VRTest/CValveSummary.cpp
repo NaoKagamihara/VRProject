@@ -3,31 +3,6 @@
 
 #include	"CValveSummary.h"
 
-////////////////////////////////////////
-//バルブの当たりサーチ
-void CValveSearch::onTrigger(PmObject* obj)
-{
-	//右手オブジェ
-	if (obj->checkObjectTag(EPmObjectTag::OBJ_RIGHTHAND))
-	{
-		//保存する
-		if (m_pHandObj[RIGHTHAND] == NULL)
-		{
-			m_pHandObj[RIGHTHAND] = obj;
-		}
-		else m_pHandObj[RIGHTHAND] = NULL;
-	}
-	//左手オブジェ
-	else if (obj->checkObjectTag(EPmObjectTag::OBJ_LEFTHAND))
-	{
-		//保存する
-		if (m_pHandObj[LEFTHAND] == NULL)
-		{
-			m_pHandObj[LEFTHAND] = obj;
-		}
-		else m_pHandObj[LEFTHAND] = NULL;
-	}
-}
 
 //////////////////////////////////////
 //バルブ管理クラス
@@ -39,14 +14,14 @@ void CValveSummary::Create()
 	PxMaterial* mate;
 	mate = tool->createMaterial(CVector3(0.5f, 0.5f, 0.5f));
 
-	CVector3 mainPos(0, 10, 0);
+	CVector3 mainPos(0, 10, 20);
 
 	//当たり判定作成
 	m_pCollision = (PmObjectDynamic*)createSphereObject(mainPos, mate, COLLISIONRADIUS, true);
 	delete tool;
 
 	//サーチを持たせる
-	m_pValveSearch = new CValveSearch();
+	m_pValveSearch = new CHandCollSearch();
 	m_pCollision->releaseCollisionSearch();
 	m_pCollision->setCollisionSearch(m_pValveSearch);
 	m_pCollision->setKinematic(true);

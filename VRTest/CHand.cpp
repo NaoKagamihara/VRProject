@@ -99,7 +99,7 @@ void CHand::update(HandData& data)
 		m_pHandColl->changeObjectTag(EPmObjectTag::OBJ_HANDGRASP, false);
 	}
 	m_HysPos = data.pos;
-
+	m_HysRot = data.handRot;
 }
 
 //•`‰æ
@@ -190,7 +190,7 @@ void CHand::haveUpdate(HandData& data)
 {
 	if (data.grasp == false)
 	{
-		m_pItem->itemLost(data.pos - m_HysPos);
+		m_pItem->itemLost(data.pos - m_HysPos,data.handRot - m_HysRot);
 		m_pItem = NULL;
 	}
 }

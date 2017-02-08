@@ -29,7 +29,7 @@ void CFigure::itemHave(const CVector3& pos, const CQuaternion& rot)
 	setGlobalPos(pos);
 }
 
-void CFigure::itemLost(const CVector3& vec)
+void CFigure::itemLost(const CVector3& vec, const CQuaternion& rot)
 {
 	changeModeFREE();
 	addForce(vec * 50, PxForceMode::eVELOCITY_CHANGE);
