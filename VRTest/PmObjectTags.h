@@ -22,4 +22,5 @@ enum EPmObjectTag
 	OBJ_ITEM = (1 << 3),
 	OBJ_FIGURE = (1 << 4),
 	OBJ_FUSE = (1 << 5),
+	OBJ_DHAVE = (1 << 6),
 };

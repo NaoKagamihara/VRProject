@@ -90,7 +90,8 @@ void CHand::update(HandData& data)
 	//アイテムを持ってるときItemの座標更新
 	if (m_pItem != NULL)
 	{
-		m_pItem->itemHave(m_pHandColl->getGlobalPos(), m_pHandColl->getGlobalQuoRot());
+		if (!m_pItem->checkObjectTag(EPmObjectTag::OBJ_DHAVE))
+			m_pItem->itemHave(m_pHandColl->getGlobalPos(), m_pHandColl->getGlobalQuoRot());
 	}
 	//手を握っていなければフリーにする
 	if (data.grasp == false)
@@ -190,8 +191,22 @@ void CHand::haveUpdate(HandData& data)
 {
 	if (data.grasp == false)
 	{
-		m_pItem->itemLost(data.pos - m_HysPos,data.handRot - m_HysRot);
-		m_pItem = NULL;
+		if (m_pItem != NULL)
+		{
+			//アイテムが設置されてないときは投げ捨てる
+			if (!m_pItem->checkObjectTag(EPmObjectTag::OBJ_DHAVE))
+			{
+				m_pItem->itemLost(data.pos - m_HysPos,data.handRot - m_HysRot);
+			}
+			//アイテムが設置されているときは置く感じ
+			else
+			{
+				CVector3 vec(0, 0, 0);
+				CQuaternion qua;
+				m_pItem->itemLost(vec, qua);
+			}
+			m_pItem = NULL;
+		}
 	}
 }
 

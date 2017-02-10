@@ -18,3 +18,15 @@ void CItem::changeModeHave()
 	this->setKinematic(true);
 	m_eItemState = EItemState::ITEM_HAVE;
 }
+
+//
+void CItem::changeModeUse()
+{
+
+}
+
+//
+void CItem::changeModeNot()
+{
+	m_eItemState = EItemState::ITEM_NOT;
+}

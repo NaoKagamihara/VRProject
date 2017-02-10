@@ -82,7 +82,7 @@ PmObjectCharacter* PmGameSummary::createCharacterCapsuleObject(CVector3 pos, flo
 	float contactOffset,
 	float stepOffset)
 {
-	return m_pMng->createCharacterCapsuleObject(pos, height, radius, material, slopeLimit, contactOffset, stepOffset);
+	return m_pCreate->createCharacterCapsuleObject(pos, height, radius, material, slopeLimit, contactOffset, stepOffset);
 }
 
 //PmObject‚ğƒV[ƒ“‚©‚çŠO‚·

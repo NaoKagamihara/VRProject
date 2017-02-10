@@ -11,6 +11,7 @@ enum EItemState
 	ITEM_FREE = (1 << 0),
 	ITEM_HAVE = (1 << 1),
 	ITEM_USE = (1 << 2),
+	ITEM_NOT = (1 << 3),
 };
 
 ////////////////////////////////////////
@@ -26,6 +27,12 @@ protected:
 
 	//Ž‚½‚ê‚Ä‚¢‚éó‘Ô‚É‚·‚é
 	void changeModeHave();
+
+	//
+	void changeModeUse();
+
+	//
+	void changeModeNot();
 
 public:
 	CItem(){};
